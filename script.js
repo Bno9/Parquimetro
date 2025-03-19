@@ -4,10 +4,18 @@ class parquimetro {
     constructor(valor){
         this.valor = valor;
         this.#horas = 0;
+        this.tarifa = 1;
     }
     adicionarValor() {
         const valorInserido = parseInt(document.getElementById("valor").value);
-        if (valorInserido > 4){
+
+        const tempo_estacionamento = (valorInserido / this.tarifa) * 30
+        const troco = valorInserido - (tempo_estacionamento / 30) * tarifa
+        console.log (tempo_estacionamento);
+        console.log (troco);
+
+
+        if (this.tarifa > 4){
             alert("Máximo de 4 reais (120 minutos)");
             return;
         }
@@ -30,7 +38,6 @@ class parquimetro {
         document.getElementById("valor").value = '';
     }
 }
-
 
 const estacionamento = new parquimetro();
 
