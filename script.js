@@ -25,6 +25,8 @@ class parquimetro {
             return;
         } else {
             alert("Minimo de 1 real");
+            document.getElementById("horas").textContent = 'R$0,00';
+            document.getElementById("valorinserido").textContent = '0 minutos';
             return;
         }
     }
