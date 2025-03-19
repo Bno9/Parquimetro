@@ -13,12 +13,13 @@ class parquimetro {
         if(valorInserido >= 1 && valorInserido <= 4){
             this.valor = valorInserido;
             this.#horas = (valorInserido / this.#tarifa) * 30;
-            this.troco();
             this.atualizarTempoeHora();
             return;
         } 
         if (valorInserido > 4){
-            alert("Máximo de 4 reais (120 minutos)");
+            alert("Máximo de 4 reais (120 minutos). Você recebera seu troco");
+            this.valor = valorInserido;
+            this.#horas = 120;
             this.troco();
             this.atualizarTempoeHora();
             return;
@@ -30,14 +31,15 @@ class parquimetro {
 
     troco(){
         const valorInserido = parseInt(document.getElementById('valor').value);
+        const tarifaMaxima = 4;
         const tempo_estacionamento = (valorInserido / this.#tarifa) * 30;
-        const troco = valorInserido - (tempo_estacionamento / 30) * this.#tarifa;
-        document.getElementById('troco').textContent = "R$"+troco;
+        const troco = (tempo_estacionamento / 30) * this.#tarifa - tarifaMaxima;
+        document.getElementById('troco').textContent = "R$"+troco.toFixed(2).replace('.',',');
     }
 
     atualizarTempoeHora() {
         document.getElementById("horas").textContent = this.#horas + ' minutos';
-        document.getElementById("valorinserido").textContent = 'R$' + this.valor;
+        document.getElementById("valorinserido").textContent = 'R$' + this.valor.toFixed(2).replace('.',',');
         document.getElementById("valor").value = '';
     }
 }
