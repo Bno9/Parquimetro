@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parquimetro</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <h1>Insira um valor e o tempo será calculado</h1>
+    <input id="valor" type="number" placeholder="valor">
+    <button onclick="estacionamento.adicionarValor()">Inserir valor</button>
+
+    <table class="tabela-container">
+        <caption> <h1>Tempo de estacionamento: </h1></caption>
+        <tr>
+            <th>Valor</th>
+            <th>Tempo</th>   
+            <th>Troco</th>
+        </tr>
+        <tr>
+            <td id="valorinserido">R$0,00</td>
+            <td id="horas">0 minutos</td>
+            <td id="troco">R$0,00</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

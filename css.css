@@ -1,0 +1,42 @@
+body {
+    background-color:azure;
+    text-align: center;
+}
+
+.tabela-container {
+    width: 30%; /* Define uma largura */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    border-collapse: collapse; /* Junta as bordas */
+    text-align: center; /* Centraliza o conteúdo dentro da tabela */}
+
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    td{
+        background-color: #f0f0f0;
+    }
+
+    th {
+        background-color: #f0f0f0;
+    }
+
+    
+    #valor {
+        height: 30px;
+        width: 200px;
+        background-color: #f0f0f0;
+        padding: 10px;
+
+    }
+
+    button{
+        height: 30px;
+        width: 100px;
+        background-color: white;   
+    }
+
+    button:hover{
+        background-color: #f0f0f0;
+    }
